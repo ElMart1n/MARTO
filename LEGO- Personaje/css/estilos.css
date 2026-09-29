@@ -1,0 +1,264 @@
+:root {
+  --lego-yellow: #f5cd2f;
+  --lego-yellow-dark: #d9b11e;
+  --lego-red: #e3000b;
+  --lego-red-dark: #b80008;
+  --lego-blue: #0055bf;
+  --lego-blue-dark: #003e8c;
+  --lego-black: #111111;
+  --stroke: 3px solid #111;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #2b303a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.canvas {
+  width: 400px;
+  height: 550px;
+  background-color: #3d4454;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.lego-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* --- CABEZA --- */
+.head-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+}
+
+.head-stud {
+  width: 42px;
+  height: 16px;
+  background: var(--lego-yellow);
+  border: var(--stroke);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin-bottom: -3px;
+  box-shadow: inset -4px 0 0 rgba(0,0,0,0.15);
+}
+
+.head {
+  width: 100px;
+  height: 85px;
+  background: var(--lego-yellow);
+  border: var(--stroke);
+  border-radius: 18px;
+  position: relative;
+  box-shadow: inset -8px -6px 0 rgba(0,0,0,0.12);
+}
+
+.brow {
+  position: absolute;
+  width: 14px;
+  height: 4px;
+  background: var(--lego-black);
+  border-radius: 2px;
+  top: 24px;
+}
+
+.brow.left { left: 24px; transform: rotate(5deg); }
+.brow.right { right: 24px; transform: rotate(-5deg); }
+
+.eye {
+  position: absolute;
+  width: 13px;
+  height: 18px;
+  background: var(--lego-black);
+  border-radius: 50%;
+  top: 32px;
+}
+
+.eye::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+}
+
+.eye.left { left: 25px; }
+.eye.right { right: 25px; }
+
+.smile {
+  position: absolute;
+  width: 36px;
+  height: 18px;
+  border-bottom: 4px solid var(--lego-black);
+  border-radius: 0 0 18px 18px;
+  bottom: 18px;
+  left: 32px;
+}
+
+.smile::before, .smile::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 6px;
+  background: var(--lego-black);
+  border-radius: 2px;
+  bottom: 12px;
+}
+
+.smile::before { left: -2px; transform: rotate(-20deg); }
+.smile::after { right: -2px; transform: rotate(20deg); }
+
+/* --- CUELLO --- */
+.neck {
+  width: 48px;
+  height: 12px;
+  background: var(--lego-yellow);
+  border: var(--stroke);
+  z-index: 2;
+  margin-top: -3px;
+  margin-bottom: -3px;
+}
+
+/* --- TORSO Y BRAZOS --- */
+.torso-container {
+  position: relative;
+  z-index: 2;
+}
+
+.torso {
+  width: 135px;
+  height: 120px;
+  background: var(--lego-red);
+  border: var(--stroke);
+  clip-path: polygon(22% 0%, 78% 0%, 100% 100%, 0% 100%);
+  position: relative;
+  box-shadow: inset -10px 0 0 rgba(0,0,0,0.15);
+}
+
+.shirt-lines {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-top: 25px solid var(--lego-yellow);
+}
+
+.arm-wrapper {
+  position: absolute;
+  top: 4px;
+}
+
+.arm-wrapper.left { left: 0px; }
+.arm-wrapper.right { right: 0px; transform: scaleX(-1); }
+
+.arm {
+  width: 32px;
+  height: 80px;
+  background: var(--lego-red-dark);
+  border: var(--stroke);
+  border-radius: 16px 6px 12px 16px;
+  transform: rotate(18deg);
+  transform-origin: top center;
+}
+
+.hand {
+  width: 28px;
+  height: 28px;
+  background: var(--lego-yellow);
+  border: var(--stroke);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -15px;
+  left: -20px;
+}
+
+.hand::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: var(--lego-yellow);
+  border: var(--stroke);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  top: 4px;
+  left: 4px;
+}
+
+/* --- CADERA Y PIERNAS --- */
+.hips-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  margin-top: -3px;
+}
+
+.hips {
+  width: 137px;
+  height: 24px;
+  background: var(--lego-blue-dark);
+  border: var(--stroke);
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hip-joint {
+  width: 22px;
+  height: 14px;
+  background: #111;
+  position: absolute;
+  bottom: 0;
+  border-radius: 4px 4px 0 0;
+}
+
+.legs {
+  display: flex;
+  gap: 3px;
+}
+
+.leg {
+  width: 67px;
+  height: 110px;
+  background: var(--lego-blue);
+  border: var(--stroke);
+  position: relative;
+  box-shadow: inset -6px 0 0 rgba(0,0,0,0.15);
+}
+
+.foot {
+  position: absolute;
+  bottom: -3px;
+  left: -3px;
+  width: 67px;
+  height: 28px;
+  background: var(--lego-blue);
+  border: var(--stroke);
+  border-top-right-radius: 6px;
+}
