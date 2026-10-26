@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Poppins:wght@300;400;500;600&display=swap');
+
+@font-face {
+    font-family: "Chilanka";
+    src: url(../font/Chilanka-Regular.ttf);
+}
+
+:root {
+    --color-primary: #1e293b;        /* Slate oscuro formal */
+    --color-accent: #2563eb;         /* Azul zafiro formal */
+    --color-accent-hover: #1d4ed8;
+    --color-dark: #0f172a;           /* Casi negro elegante */
+    --color-light: #f8fafc;          /* Blanco roto / gris suave */
+    --color-muted: #64748b;
+    --color-border: #e2e8f0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #334155;
+    background-color: #ffffff;
+    line-height: 1.65;
+}
+
+/* Tipografía Formal estilo Candy Template */
+h1, h2, h3, h4, h5, h6, .brand-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--color-dark);
+}
+
+.fuente-chilanka {
+    font-family: "Chilanka", cursive;
+}
+
+/* Titulares con línea inferior estilo Candy */
+.heading-underlined {
+    position: relative;
+    padding-bottom: 14px;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+}
+
+.heading-underlined::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--color-accent);
+    border-radius: 2px;
+}
+
+.heading-underlined.text-center::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.subheading-formal {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-accent);
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Logotipo */
+.logotipo {
+    width: 75px;
+}
+
+/* Navbar Formal Minimalista */
+.navbar-formal {
+    background-color: rgba(15, 23, 42, 0.96) !important;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar-formal .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.88rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.75);
+    padding: 0.5rem 0.9rem !important;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-formal .nav-link:hover,
+.navbar-formal .nav-link.active {
+    color: #ffffff !important;
+}
+
+.navbar-formal .nav-link.active {
+    color: #60a5fa !important;
+}
+
+/* Botones Formales */
+.btn-formal {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+    padding: 0.65rem 1.6rem;
+    border-radius: 4px;
+    transition: all 0.25s ease;
+}
+
+.btn-formal-primary {
+    background-color: var(--color-accent);
+    color: #ffffff;
+    border: 1px solid var(--color-accent);
+}
+
+.btn-formal-primary:hover {
+    background-color: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+}
+
+.btn-formal-outline {
+    background-color: transparent;
+    color: var(--color-dark);
+    border: 1px solid #cbd5e1;
+}
+
+.btn-formal-outline:hover {
+    background-color: var(--color-dark);
+    color: #ffffff;
+    border-color: var(--color-dark);
+}
+
+.btn-formal-outline-light {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.btn-formal-outline-light:hover {
+    background-color: #ffffff;
+    color: var(--color-dark);
+    border-color: #ffffff;
+}
+
+/* Tarjetas de Proyectos Formales */
+.card-formal {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card-formal:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
+    border-color: #cbd5e1;
+}
+
+/* Carrusel y elementos visuales */
+.carousel-formal .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.carousel-formal .carousel-indicators button.active {
+    background-color: var(--color-accent);
+    width: 26px;
+    border-radius: 6px;
+}
+
+/* Mapa */
+#mapa {
+    height: 380px;
+    width: 100%;
+}

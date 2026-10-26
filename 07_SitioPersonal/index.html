@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="José Martín Álvarez Guerrero">
+  <meta name="description"
+    content="Portafolio personal y profesional de José Martín Álvarez Guerrero - Desarrollador Web y estudiante en la Universidad Tecnológica de León.">
+  <meta name="keywords"
+    content="José Martín Álvarez Guerrero, portafolio profesional, desarrollo web, Bootstrap 5, HTML5, CSS3, UTL, software developer">
+
+  <!-- Bootstrap CSS local -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Estilos personalizados inspirados en Candy Template -->
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="iconos/cs2.ico" type="image/x-icon">
+
+  <title>Pagina actividad </title>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#menuNavbar" data-bs-offset="90">
+
+  <!-- ==========================================
+     HEADER Y NAVEGACIÓN FORMAL
+=========================================== -->
+  <header class="sticky-top shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-formal py-2">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="imagenes/logo1.jpg" alt="Logo" class="d-inline-block align-text-middle logotipo">
+          Martin Alvarez
+        </a>
+
+        <button class="navbar-toggler border-secondary" type="button" data-bs-toggle="collapse"
+          data-bs-target="#menuNavbar" aria-controls="menuNavbar" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuNavbar">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link active" href="#inicio">Inicio</a>
+            <a class="nav-link" href="#sobre-mi">Perfil</a>
+            <a class="nav-link" href="#proyectos">Proyectos</a>
+            <a class="nav-link" href="#galeria">Hobbies</a>
+            <a class="nav-link" href="#multimedia">Multimedia</a>
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================
+     SECCIÓN 1: HERO / PORTADA ESTILO CANDY (#inicio)
+=========================================== -->
+  <section id="inicio" class="py-5 bg-dark text-white border-bottom border-secondary position-relative"
+    style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
+    <div class="container py-lg-5">
+      <div class="row align-items-center g-5">
+        <!-- Texto de Presentación Principal -->
+        <article class="col-lg-7 text-center text-lg-start">
+          <span class="subheading-formal text-primary mb-2">Desarrollador Web & Estudiante UTL</span>
+
+          <h1 class="display-3 fw-bold text-white mb-3 text-uppercase">
+            José Martín <br><span class="text-primary">Álvarez Guerrero</span>
+          </h1>
+
+          <p class="lead text-light text-opacity-75 mb-4">
+            Especializado en la creación de interfaces web funcionales, responsivas y de alto rendimiento con el
+            diseño adaptable y el desarrollo de software de calidad.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start mb-4">
+            <div class="border border-secondary rounded px-3 py-2 bg-dark bg-opacity-50 small">
+              <i class="bi bi-code-slash text-primary me-1"></i> Frontend & Backend
+            </div>
+            <div class="border border-secondary rounded px-3 py-2 bg-dark bg-opacity-50 small">
+              <i class="bi bi-layers-fill text-primary me-1"></i> Bootstrap
+            </div>
+            <div class="border border-secondary rounded px-3 py-2 bg-dark bg-opacity-50 small">
+              <i class="bi bi-shield-check text-primary me-1"></i> Modelado 3D
+            </div>
+          </div>
+
+          <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+            <a href="#proyectos" class="btn btn-formal btn-formal-primary">
+              <i class="bi bi-grid-fill me-1"></i> Ver Trabajos
+            </a>
+            <a href="contacto.html" class="btn btn-formal btn-formal-outline-light">
+              <i class="bi bi-send-fill me-1"></i> Ir a Contacto
+            </a>
+          </div>
+        </article>
+
+        <!-- Fotografía de Perfil con Marco Formal -->
+        <figure class="col-lg-5 text-center mb-0">
+          <div class="position-relative d-inline-block">
+            <img src="imagenes/Inicio.jpg" alt="José Martín Álvarez Guerrero"
+              class="img-fluid rounded-3 shadow-lg border border-2 border-secondary"
+              style="max-height: 420px; object-fit: cover;">
+            <div
+              class="position-absolute bottom-0 start-50 translate-middle-x mb-n3 bg-dark text-white py-2 px-4 rounded-2 shadow border border-secondary small text-nowrap">
+              <i class="bi bi-patch-check-fill text-primary me-1"></i> Portafolio Universitario
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     SECCIÓN 2: SOBRE MÍ & CUALIDADES (#sobre-mi)
+     (Estilo Candy: Especial Qualities + Accordion)
+=========================================== -->
+  <section id="sobre-mi" class="py-5 bg-white">
+    <div class="container py-lg-4">
+      <div class="row g-5 align-items-center">
+        <!-- Columna Izquierda: Tarjeta Formal de Filosofía -->
+        <aside class="col-lg-5">
+          <div class="card card-formal p-4 border-0 shadow-sm text-center bg-light">
+            <img src="imagenes/lego1.jpg" alt="José Martín Álvarez"
+              class="img-fluid rounded-circle mx-auto mb-3 border border-3 border-primary shadow-sm"
+              style="width: 120px; height: 120px; object-fit: cover;">
+
+            <span class="subheading-formal">--------------</span>
+            <h4 class="mb-3">Descripcion personal</h4>
+
+            <p class="fst-italic text-muted px-2 small mb-3">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis molestiae deserunt aliquam fugiat eum
+              quisquam ipsa, cupiditate, alias, impedit voluptatem ducimus aspernatur quas quasi vitae laudantium fugit
+              iusto nostrum odio.
+            </p>
+
+            <div class="border-top pt-3">
+              <span class="fw-bold fs-5 text-dark d-block">— José Martín Álvarez Guerrero</span>
+              <small class="text-secondary fuente-chilanka">tecnologias de la informacion • UTL</small>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Columna Derecha: Cualidades & Acordeón de Habilidades -->
+        <article class="col-lg-7">
+          <span class="subheading-formal">Acerca de Mí</span>
+          <h2 class="heading-underlined mb-4">Competencias y Formación</h2>
+
+          <p class="text-muted mb-4">
+            Soy estudiante con mucho interés en la informática y el desarrollo web. Me gusta aprender a construir
+            páginas web útiles, sencillas de usar y seguir mejorando mis habilidades prácticas en cada proyecto.
+          </p>
+
+          <!-- Componente Accordion de Bootstrap -->
+          <div class="accordion shadow-sm" id="accordionCandy">
+            <!-- Trayectoria -->
+            <div class="accordion-item border rounded mb-2 overflow-hidden">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button fw-bold text-dark bg-light" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <i class="bi bi-person-badge-fill text-primary me-2"></i> Mi Enfoque y Aprendizaje
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionCandy">
+                <div class="accordion-body text-muted small">
+                  Me gusta crear páginas web limpias, ordenadas y fáciles de navegar. Pongo especial atención en que los
+                  sitios se vean bien tanto en la computadora como en el celular, cuidando la estructura de las
+                  etiquetas y el diseño visual.
+                </div>
+              </div>
+            </div>
+
+            <!-- Formación Académica UTL -->
+            <div class="accordion-item border rounded mb-2 overflow-hidden">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed fw-bold text-dark bg-light" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                  aria-controls="collapseTwo">
+                  <i class="bi bi-mortarboard-fill text-primary me-2"></i> Formación y Estudios
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionCandy">
+                <div class="accordion-body text-muted small">
+                  Estudio en el área de tecnologías de la información en la <strong>Universidad Tecnológica de
+                    León</strong>. Durante mis clases he aprendido las bases del desarrollo web, organización de datos y
+                  el trabajo con herramientas digitales para proyectos de clase.
+                </div>
+              </div>
+            </div>
+
+
+            <div class="accordion-item border rounded overflow-hidden">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed fw-bold text-dark bg-light" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                  aria-controls="collapseThree">
+                  <i class="bi bi-bar-chart-fill text-primary me-2"></i> Temas y Habilidades Prácticas
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionCandy">
+                <div class="accordion-body">
+                  <div class="mb-3">
+                    <div class="d-flex justify-content-between small fw-bold mb-1">
+                      <span>Estructura Web con HTML5</span>
+                      <span class="text-primary">90%</span>
+                    </div>
+                    <div class="progress" style="height: 6px;">
+                      <div class="progress-bar bg-primary" role="progressbar" style="width: 90%"></div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="d-flex justify-content-between small fw-bold mb-1">
+                      <span>Diseño con CSS3 y Bootstrap</span>
+                      <span class="text-primary">85%</span>
+                    </div>
+                    <div class="progress" style="height: 6px;">
+                      <div class="progress-bar bg-dark" role="progressbar" style="width: 85%"></div>
+                    </div>
+                  </div>
+                  <div class="mb-2">
+                    <div class="d-flex justify-content-between small fw-bold mb-1">
+                      <span>Lógica e Interactividad con JavaScript</span>
+                      <span class="text-primary">75%</span>
+                    </div>
+                    <div class="progress" style="height: 6px;">
+                      <div class="progress-bar bg-primary" role="progressbar" style="width: 75%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     SECCIÓN 3: PROYECTOS / WORKS (#proyectos)
+     (Estilo Candy: Cards con Categoría + Modales)
+=========================================== -->
+  <section id="proyectos" class="py-5 bg-light border-top border-bottom">
+    <div class="container py-lg-4">
+      <div class="text-center mb-5">
+        <span class="subheading-formal">Trabajos y Prácticas</span>
+        <h2 class="heading-underlined text-center">Proyectos Seleccionados</h2>
+        <p class="text-muted">Algunos de los trabajos escolares y ejercicios prácticos que he realizado en mis clases.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Proyecto 1 -->
+        <article class="col-12 col-md-6 col-lg-3">
+          <div class="card card-formal h-100 overflow-hidden shadow-sm">
+            <img src="imagenes/edit2.webp" class="card-img-top" alt="Edición de Video"
+              style="height: 180px; object-fit: cover;">
+            <div class="card-body d-flex flex-column p-4">
+              <span class="text-primary small fw-bold text-uppercase mb-1">Producción Audiovisual</span>
+              <h5 class="card-title fw-bold text-dark">Edición de Video</h5>
+              <p class="card-text text-muted small flex-grow-1">
+                Trabajos de recorte, montaje dinámico de clips, efectos y musicalización realizados para proyectos
+                escolares y digitales.
+              </p>
+              <button class="btn btn-formal btn-formal-outline w-100 mt-3" data-bs-toggle="modal"
+                data-bs-target="#modal_proy1">
+                Detalles <i class="bi bi-arrow-right ms-1"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 2 -->
+        <article class="col-12 col-md-6 col-lg-3">
+          <div class="card card-formal h-100 overflow-hidden shadow-sm">
+            <img src="imagenes/web.jpg" class="card-img-top" alt="Sitios Web" style="height: 180px; object-fit: cover;">
+            <div class="card-body d-flex flex-column p-4">
+              <span class="text-primary small fw-bold text-uppercase mb-1">Diseño Web</span>
+              <h5 class="card-title fw-bold text-dark">Sitios Web</h5>
+              <p class="card-text text-muted small flex-grow-1">
+                Diseño y maquetación de páginas web completas y responsivas con Bootstrap que se ajustan de manera
+                fluida a computadoras y celulares.
+              </p>
+              <button class="btn btn-formal btn-formal-outline w-100 mt-3" data-bs-toggle="modal"
+                data-bs-target="#modal_proy2">
+                Detalles <i class="bi bi-arrow-right ms-1"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 3 -->
+        <article class="col-12 col-md-6 col-lg-3">
+          <div class="card card-formal h-100 overflow-hidden shadow-sm">
+            <img src="imagenes/3D.webp" class="card-img-top" alt="Modelado 3D"
+              style="height: 180px; object-fit: cover;">
+            <div class="card-body d-flex flex-column p-4">
+              <span class="text-primary small fw-bold text-uppercase mb-1">Diseño 3D</span>
+              <h5 class="card-title fw-bold text-dark">Modelado 3D</h5>
+              <p class="card-text text-muted small flex-grow-1">
+                Creación y estructuración de modelos y figuras tridimensionales, cuidando formas, iluminación básica y
+                texturas.
+              </p>
+              <button class="btn btn-formal btn-formal-outline w-100 mt-3" data-bs-toggle="modal"
+                data-bs-target="#modal_proy3">
+                Detalles <i class="bi bi-arrow-right ms-1"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 4 -->
+        <article class="col-12 col-md-6 col-lg-3">
+          <div class="card card-formal h-100 overflow-hidden shadow-sm">
+            <img src="imagenes/base.jpg" class="card-img-top" alt="Bases de Datos & Cloud"
+              style="height: 180px; object-fit: cover;">
+            <div class="card-body d-flex flex-column p-4">
+              <span class="text-primary small fw-bold text-uppercase mb-1">Manejo de Datos</span>
+              <h5 class="card-title fw-bold text-dark">Bases de Datos</h5>
+              <p class="card-text text-muted small flex-grow-1">
+                Organización de tablas con información en bases de datos sencillas y consultas para encontrar registros
+                rápidos.
+              </p>
+              <button class="btn btn-formal btn-formal-outline w-100 mt-3" data-bs-toggle="modal"
+                data-bs-target="#modal_proy4">
+                Detalles <i class="bi bi-arrow-right ms-1"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     SECCIÓN 4: GALERÍA DE PASATIEMPOS (#galeria)
+     (Componente Avanzado: Carousel Formal)
+=========================================== -->
+  <section id="galeria" class="py-5 bg-white">
+    <div class="container py-lg-4">
+      <div class="text-center mb-4">
+        <span class="subheading-formal">Intereses Personales</span>
+        <h2 class="heading-underlined text-center">Gustos o Hobbies</h2>
+        <p class="text-muted">imgs de ejemplos
+          .</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+          <div id="carouselCandy"
+            class="carousel slide carousel-formal shadow rounded-3 overflow-hidden border border-secondary border-opacity-25"
+            data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselCandy" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselCandy" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselCandy" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselCandy" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+
+            <div class="carousel-inner">
+              <!-- Slide 1: Escuchar Música -->
+              <div class="carousel-item active">
+                <img src="imagenes/jack.jpg" class="d-block w-100" alt="Escuchar Música"
+                  style="height: 440px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                  <h5 class="fw-bold text-white text-uppercase">Escuchar Música</h5>
+                  <p class="mb-0 text-white-50 small">Lo que mas escucho es rap o hip hop como artistas don toliver o
+                    travist scoot.</p>
+                </div>
+              </div>
+              <!-- Slide 2: Jugar Videojuegos -->
+              <div class="carousel-item">
+                <img src="imagenes/elden.avif" class="d-block w-100" alt="Jugar Videojuegos"
+                  style="height: 440px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                  <h5 class="fw-bold text-white text-uppercase">Jugar Videojuegos</h5>
+                  <p class="mb-0 text-white-50 small">Me gusta jugar juegos tipo jugador contra boss como elden ring o
+                    juegos competitivos.</p>
+                </div>
+              </div>
+              <!-- Slide 3: Viajar -->
+              <div class="carousel-item">
+                <img src="imagenes/gto.png" class="d-block w-100" alt="Viajar"
+                  style="height: 440px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                  <h5 class="fw-bold text-white text-uppercase">Viajar</h5>
+                  <p class="mb-0 text-white-50 small">Me gusta viajar con amigos o salir a lugares tranquilos.</p>
+                </div>
+              </div>
+              <!-- Slide 4: Edición de Video -->
+              <div class="carousel-item">
+                <img src="imagenes/edit.webp" class="d-block w-100" alt="Edición de Video"
+                  style="height: 440px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                  <h5 class="fw-bold text-white text-uppercase">Edición de Video</h5>
+                  <p class="mb-0 text-white-50 small">me gusta la edicion de video pero apenas estoy aprendiendo .</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCandy" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselCandy" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     SECCIÓN 5: MULTIMEDIA (#multimedia)
+     (Video con Bootstrap Ratio y Audio HTML5)
+=========================================== -->
+  <section id="multimedia" class="py-5 bg-light border-top border-bottom">
+    <div class="container py-lg-4">
+      <div class="text-center mb-5">
+        <span class="subheading-formal">Artista favorito</span>
+        <h2 class="heading-underlined text-center">Don Toliver</h2>
+        <p class="text-muted">Don Toliver (cuyo nombre real es Caleb Zackery Toliver) es un cantante, compositor y
+          rapero estadounidense nacido en Houston, Texas, el 12 de junio de 1994.
+        </p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Video -->
+        <article class="col-lg-7">
+          <div class="card card-formal h-100 p-4 border-0 shadow-sm bg-white">
+            <h5 class="fw-bold text-dark mb-2">
+              <i class="bi bi-play-circle-fill text-primary me-2"></i> Video Musical
+            </h5>
+            <p class="text-muted small mb-3">
+              Don Toliver - FWU [Official Music Video]
+            </p>
+            <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm border">
+              <iframe src="video/Don Toliverv.mp4" title="Demostración Bootstrap" allowfullscreen></iframe>
+            </div>
+          </div>
+        </article>
+
+        <!-- Audio -->
+        <article class="col-lg-5">
+          <div
+            class="card card-formal h-100 p-4 border-0 shadow-sm bg-white d-flex flex-column justify-content-between">
+            <div>
+              <h5 class="fw-bold text-dark mb-2">
+                <i class="bi bi-soundwave text-primary me-2"></i>Musica
+              </h5>
+              <p class="text-muted small mb-4">
+                Audio de prueba en mp3
+              </p>
+            </div>
+
+            <div class="bg-light p-4 rounded text-center border my-auto">
+              <i class="bi bi-mic-fill text-primary display-4 d-block mb-3"></i>
+              <audio controls class="w-100 mb-2">
+                <source src="audio/Exca.wav" type="audio/wav">
+
+              </audio>
+              <span class="badge bg-dark">Don toliver</span>
+              <small class="text-muted d-block mt-2">Don Toliver - Excavator</small>
+            </div>
+
+            <div class="mt-3 text-center">
+              <p class="small text-secondary mb-0"><i class="bi bi-check2-circle text-primary"></i>
+                Spotify.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     BANNER CALL TO ACTION A CONTACTO
+=========================================== -->
+  <section class="py-5 bg-dark text-white text-center"
+    style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);">
+    <div class="container py-3">
+      <h2 class="display-6 fw-bold mb-3 text-uppercase">¿Deseas Iniciar un Proyecto o Colaboración?</h2>
+      <p class="lead text-light text-opacity-75 mb-4 col-lg-8 mx-auto">
+        Puedes ponerte en contacto directamente conmigo a través del formulario oficial o consultar mi ubicación en la
+        Universidad Tecnológica de León.
+      </p>
+      <a href="contacto.html" class="btn btn-formal btn-formal-primary btn-lg shadow">
+        <i class="bi bi-envelope-check-fill me-2"></i> Ir a la Página de Contacto
+      </a>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     FOOTER FORMAL
+=========================================== -->
+  <footer class="bg-dark text-white text-center py-4 border-top border-secondary">
+    <div class="container">
+      <p class="fs-5 mb-1 brand-text text-white">Redes o links de contacto</p>
+      <p class="text-white-50 small mb-3">Universidad Tecnológica de León • Aplicaciones Web - Actividad 7</p>
+
+      <div class="mb-3 d-flex justify-content-center gap-3">
+        <a href="https://github.com/ElMart1n  " target="_blank" class="btn btn-outline-light btn-sm rounded-circle"
+          style="width: 38px; height: 38px; line-height: 24px;" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://x.com/ElMartinALV" target="_blank" class="btn btn-outline-light btn-sm rounded-circle"
+          style="width: 38px; height: 38px; line-height: 24px;" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="mailto:chico3martin@gmail.com" class="btn btn-outline-light btn-sm rounded-circle"
+          style="width: 38px; height: 38px; line-height: 24px;" aria-label="Contacto"><i
+            class="bi bi-envelope-fill"></i></a>
+      </div>
+
+      <small class="text-white-50">© 2026 - José Martín Álvarez Guerrero. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+     MODALES FORMALES DE PROYECTOS
+=========================================== -->
+  <!-- Modal 1 -->
+  <div class="modal fade" id="modal_proy1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title fw-bold" id="modalLabel1"><i class="bi bi-camera-reels text-primary me-2"></i> Práctica
+            de
+            Edición de Video</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body text-center p-4">
+          <img src="imagenes/edit.webp" alt="Edición de Video" class="img-fluid rounded mb-3 shadow-sm">
+          <p class="text-start text-muted small">
+            En este proyecto escolar aprendí a recortar tomas, sincronizar pistas de audio, aplicar transiciones suaves
+            y
+            exportar videos con buena calidad para presentaciones escolares y digitales.
+          </p>
+          <div class="text-start">
+            <span class="badge bg-primary">Montaje de Video</span>
+            <span class="badge bg-secondary">Transiciones</span>
+            <span class="badge bg-secondary">Audio</span>
+          </div>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-formal btn-formal-outline" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div class="modal fade" id="modal_proy2" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title fw-bold" id="modalLabel2"><i class="bi bi-laptop text-primary me-2"></i> Creación de
+            Sitios Web</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body text-center p-4">
+          <img src="imagenes/web.jpg" alt="Sitios Web" class="img-fluid rounded mb-3 shadow-sm">
+          <p class="text-start text-muted small">
+            Práctica de maquetación en la que creamos un sitio web completo que se acomoda de forma automática a
+            cualquier
+            pantalla. Aprendimos a ordenar los encabezados, textos y botones con Bootstrap para que se lean cómodos
+            desde un teléfono o una computadora.
+          </p>
+          <div class="text-start">
+            <span class="badge bg-primary">Bootstrap 5</span>
+            <span class="badge bg-secondary">HTML5</span>
+            <span class="badge bg-secondary">CSS3</span>
+          </div>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-formal btn-formal-outline" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div class="modal fade" id="modal_proy3" tabindex="-1" aria-labelledby="modalLabel3" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title fw-bold" id="modalLabel3"><i class="bi bi-box text-primary me-2"></i> Práctica de
+            Modelado 3D</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body text-center p-4">
+          <img src="imagenes/3D.webp" alt="Modelado 3D" class="img-fluid rounded mb-3 shadow-sm">
+          <p class="text-start text-muted small">
+            Trabajo escolar donde aprendí a crear y modelar objetos en tres dimensiones. Realizamos la forma geométrica
+            de
+            las piezas, aplicamos materiales, colores, luces y renderizamos las figuras finales.
+          </p>
+          <div class="text-start">
+            <span class="badge bg-primary">Diseño 3D</span>
+            <span class="badge bg-secondary">Texturas</span>
+            <span class="badge bg-secondary">Render</span>
+          </div>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-formal btn-formal-outline" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4 -->
+  <div class="modal fade" id="modal_proy4" tabindex="-1" aria-labelledby="modalLabel4" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title fw-bold" id="modalLabel4"><i class="bi bi-database-check text-primary me-2"></i>
+            Organización de Bases de Datos</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body text-center p-4">
+          <img src="imagenes/base.jpg" alt="Bases de Datos" class="img-fluid rounded mb-3 shadow-sm">
+          <p class="text-start text-muted small">
+            Proyecto escolar donde aprendimos a almacenar información de forma ordenada mediante tablas relacionadas.
+            Realizamos ejercicios prácticos para guardar datos de usuarios o productos y hacer búsquedas rápidas con
+            consultas SQL sencillas.
+          </p>
+          <div class="text-start">
+            <span class="badge bg-secondary">Tablas</span>
+            <span class="badge bg-primary">Consultas SQL</span>
+            <span class="badge bg-secondary">Informática</span>
+          </div>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-formal btn-formal-outline" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle con JS local -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
